@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3 style="display: inline-block;" >Lista De Ubicaciones</h3>
+      <div style="float: right;"><b>Registrar Ubicación</b>
+      <button (click)="register()" class="btn btn-success btn-circle btn-circle-sm m-1"><i class="fa fa-plus" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+      <thead>
+        <tr class="text-center">
+          <th>Nombre</th>
+          <th>Area en M2</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of listTasks" class="text-center">
+          <td>{{task.name}}</td>
+          <td>{{task.areaM2}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="delete(task.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
