@@ -34,7 +34,7 @@ export class ListComponent implements OnInit {
     this.service.deleteTask(idTask).
     subscribe(data=>{
       if(data.message=="success"){
-        alert("Se elimino con exito la Tarea");
+        alert("Se elimino con exito la Ubicación");
         this.loadListTask();
       }
     },error=>{
